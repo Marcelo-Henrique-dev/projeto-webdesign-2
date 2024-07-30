@@ -1,0 +1,263 @@
+/* VARIÁVEIS */
+
+:root{
+    --roxo-principal: #5e3ea1;
+    --roxo-secundario: #4c3282;
+    --roxo-hover-claro: #6c49b6;
+    --rosa: rgb(231, 66, 107);
+    --verde: #5fb382;
+}
+
+/* PADRÕES */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open sans", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.center{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+.flex{
+    display: flex;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.column{
+    flex-direction: column;
+}
+.w100{
+    width: 100%;
+}
+.w50{
+    width: 50%;
+}
+.w70{
+    width: 70%;
+}
+.w30{
+    width: 30%;
+}
+.w33{
+    width: 33.3%;
+}
+.divisor{
+    border: 1px solid var(--roxo-principal);
+}
+
+/* HEADER */
+
+header{
+    background-color: var(--roxo-principal);
+}
+header > .center{
+    justify-content: space-between;
+}
+.logo a{
+    font-size: 20px;
+    padding: 12px 0;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline-block;
+    font-size: 15px;
+}
+.menu ul li a{
+    color: white;
+    padding: 15px 15px;
+    display: inline-block;
+    transition: 0.6s;
+}
+.menu ul li a:hover{
+    background-color: var(--roxo-hover-claro);
+}
+.menu ul li a.selected{
+    background-color: var(--roxo-hover-claro);
+}
+
+/* TEXTO CHAMADA */
+
+section.texto-chamada{
+    background-color: var(--roxo-secundario);
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    h2, h3{
+        font-weight: normal;
+    }
+    i{
+        font-size: 40px;
+    }
+    a{
+        color: var(--rosa);
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+section.texto-chamada > .center{
+    gap: 10px;
+}
+
+/* LOJA */
+
+section.loja{
+    padding: 30px 0;
+}
+section.loja > .center{
+    justify-content: center;
+}
+.box-single-wrap{
+    padding: 10px 20px;
+}
+.box-single-loja{
+    border: 1px solid rgb(225, 225, 225);
+    text-align: center;
+    height: 100%;
+    img{
+        max-width: 100%;
+    }
+    h2{
+        font-weight: normal;
+        padding-top: 10px;
+    }
+    p{
+        font-weight: lighter;
+        padding: 0 10px;
+        text-align: justify;
+    }
+    a{
+        background-color: var(--verde);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        transition: 0.4s;
+    }
+    a:hover{
+        gap: 25px;
+    }
+}
+.desc{
+    justify-content: space-between;
+    height: 100%;
+    gap: 10px;
+}
+
+/* NOVIDADES */
+
+section.novidades{
+    padding: 30px 0;
+}
+section.novidades > .center{
+    gap: 10px;
+}
+section.novidades .noticias{
+    gap: 10px;
+}
+section.novidades .noticias .w50{
+    width: calc((100% / 2) - 15px);
+}
+.noticia-single{
+    gap: 8px;
+    i{
+        font-size: 40px;
+        color: var(--roxo-principal);
+    }
+    p{
+        text-align: justify;
+    }
+}
+.depoimentos{
+    text-align: center;
+    flex: 1;
+    h2{
+        color: var(--roxo-principal);
+        padding: 10px 0;
+        border-bottom: 2px solid var(--roxo-principal);
+    }
+}
+.depoimento-single{
+    padding: 10px 0;
+    gap: 10px;
+    .perfil{
+        width: 40px;
+        height: 40px;
+        background-color: #ccc;
+        border-radius: 50%;
+    }
+    h3{
+        color: var(--roxo-hover-claro);
+        font-weight: normal;
+    }
+    p{
+        font-weight: lighter;
+        text-align: justify;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--roxo-principal);
+    padding: 20px 0;
+    a{
+        display: block;
+    }
+    p{
+        color: white;
+        text-align: right;
+    }
+    .center{
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 870px){
+    .w33{
+        width: 50%;
+    }
+    .w70{
+        width: 90%;
+    }
+    section.novidades > .center{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section.novidades > .center > .divisor{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .w33{
+        width: 90%;
+    }
+    .w50{
+        width: 90%!important;
+    }
+    .depoimentos-list{
+        align-items: center;
+    }
+    .depoimento-single{
+        width: 90%;
+    }
+}
